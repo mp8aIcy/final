@@ -10,12 +10,13 @@
     $sql->execute();
     $results = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach($results as $row){
-        echo $row["id"]+"  ";
-        echo $row["itemid"]+"  ";
-        echo $row["name"]+"  ";
-        echo $row["quantity"]+"  ";
-        echo $row["rmid"]+"  ";
-        echo $row["name"]+"  ";
-        echo $row["sum"]+"  ";
+        echo $row["id"],"  ";
+        echo $row["itemid"],"  ";
+        echo $row["quantity"],"  ";
+        echo $row["rmid"],"  ";
+        echo $row["name"],"  ";
+        echo $row["sum"],"  ";
+        if($row["name"] == NULL){echo "NULL";}
+        echo "<br>";
         }
 ?>
